@@ -21,6 +21,7 @@ class TPQueue {
         v--;
         }
   arr[(v + 1) % size] = x;
+  last++;
   }
   }
   T front() {
