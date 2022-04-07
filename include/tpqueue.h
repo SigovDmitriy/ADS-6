@@ -15,7 +15,7 @@ class TPQueue {
     if (last - first >= size) {
       throw "Full!";
     } else {
-    int v = last
+    int v = last;
       while ((v >= first) && (arr[(v % size].prior < x.prior)) {
         arr[(v + 1) % size] = arr[v % size];
         v--;
