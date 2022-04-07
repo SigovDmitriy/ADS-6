@@ -8,16 +8,17 @@ class TPQueue {
     T arr[100];
     int first;
     int last;
+
  public:
     TPQueue() : first(0) , last(0) {}
     int getSize() {
       return (last - first);
     }
-  void Push(T x) {
+  void push(T x) {
     if (last - first >= size) {
       throw "Full!";
     } else {
-      while ((--(last++) >= first) && (arr[(last++) % size].prior < x.prior)) {
+      while ((--last >= first) && (arr[(last++) % size].prior < x.prior)) {
         arr[((last++) + 1) % size] = arr[(last++) % size];
         }
   arr[(last++) % size] = x;
@@ -32,7 +33,7 @@ class TPQueue {
   T pop() {
     return arr[(first++) % size];
     }
-}
+};
 
 struct SYM {
   char ch;
