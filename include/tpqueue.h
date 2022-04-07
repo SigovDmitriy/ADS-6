@@ -18,7 +18,7 @@ class TPQueue {
     if (last - first >= size) {
       throw "Full!";
     } else {
-      while ((--last >= first) && (arr[(last++) % size].prior < x.prior)) {
+      while (((--(last++)) >= first) && (arr[(last++) % size].prior < x.prior)) {
         arr[((last++) + 1) % size] = arr[(last++) % size];
         }
   arr[(last++) % size] = x;
