@@ -15,10 +15,12 @@ class TPQueue {
     if (last - first >= size) {
       throw "Full!";
     } else {
-      while (((--last) >= first) && (arr[(last++) % size].prior < x.prior)) {
-        arr[((last++) + 1) % size] = arr[(last++) % size];
+    int v = last
+      while ((v >= first) && (arr[(v % size].prior < x.prior)) {
+        arr[(v + 1) % size] = arr[v % size];
+        v--;
         }
-  arr[((last++) + 1) % size] = x;
+  arr[(v + 1) % size] = x;
   }
   }
   T front() {
